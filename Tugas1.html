@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tugas 1</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap);
+
+        *, 
+        *::before, 
+        *::after{
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            font-family: 'Quicksand';
+            margin: 0;
+        }
+
+        .navbar-container{
+            max-width: 1200px;
+            width: 100%;
+            margin-inline: auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-block: 1rem;
+            z-index: 999;
+        }
+
+        .nav-list ul{
+            padding-left: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem 1rem;
+        }
+
+        .nav-list ul li{
+            list-style-type: none;
+        }
+
+        .nav-list ul li a{
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            color: black;
+            padding: 0.5rem 1.5rem;
+            border-radius: 80px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-list ul li a:hover{
+            background-color: #5da295;
+            color: white;
+        }
+
+        .main1{
+            max-width: 1200px;
+            width: 100%;
+            margin-inline: auto;
+            padding: 2rem 4rem;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            background-color: antiquewhite;
+        }
+
+        .content{
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .content-image{
+            flex: 1;
+            display: flex;
+            margin-left: 60px;
+        }
+
+        .content-image img{
+            width: 500px;
+            border-radius: 50px;
+        }
+
+        .content-desc{
+            flex: 1 1;
+        }
+
+        .content-desc .title{
+            font-size: 2rem;
+            margin-block: 1rem;
+        }
+
+        .content-desc p{
+            line-height: 1.7rem;
+            font-size: 1.2rem;
+        }
+
+        .content-desc button{
+            padding: 8px 16px;
+            margin-block-start: 1rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1rem;
+            font-family: 'Quicksand';
+            color: white;
+            border: 3px solid transparent;
+            border-radius: 80px;
+            background-color: #5da295;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .content-desc button:hover{
+            border: 3px solid #5da295;
+            color: #5da295;
+            background-color: transparent;
+        }
+
+        .gallery-container {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .gallery-title {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            font-family: 'Quicksand';
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 150px;
+        }
+
+        .gallery-item {
+            margin: 10px;
+            width: calc(33.33% - 20px); 
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item-description p {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .gallery-button button{
+            padding: 8px 16px;
+            margin-block-start: 1rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1rem;
+            font-family: 'Quicksand';
+            color: white;
+            border: 3px solid transparent;
+            border-radius: 80px;
+            background-color: #5da295;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .gallery-button:hover button{
+            border: 3px solid #5da295;
+            color: #5da295;
+            background-color: transparent;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #5da295;
+            color: #fff;
+            padding: 0.2rem 0;
+            text-align: center;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            width: 100%;
+            margin-inline: auto;
+            padding: 0 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-content p {
+            margin-bottom: 1rem;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar-container">
+        <div class="logo">
+            <h2>Telur Asin Brebes</h2>
+        </div>
+        <nav class="nav-list">
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Tentang</a></li>
+                <li><a href="#">Produk</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main1">
+        <div class="content">
+            <div class="content-desc">
+                <h1 class="title">Telur Asin Khas Brebes</h1>
+                <p>
+                    Keaslian cita rasa tradisional di setiap lapisan telur asin gurih. Dibuat dengan hati dan warisan lokal dengan tekstur yang lembut dan rasa asin yang pas, yang akan memanjakan lidah anda. Kunjungi kami untuk menikmati kelezatan yang tak terlupakan dan bawa pulang kehangatan tradisi dalam setiap butir telur asin berkualitas.
+                </p>
+                <button>Masuk</button>
+                <button>Daftar</button>
+            </div>
+            <div class="content-image">
+                <img src="https://thewbifoundation.com/wp-content/uploads/2023/06/Telur-Asin-1.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery-container">
+        <h2>Check Out Our Products!</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+              <img src="https://images.tokopedia.net/img/cache/500-square/VqbcmM/2021/6/16/fb096396-1b67-4964-8f9e-c372daaebe2b.jpg" alt="Image 1">
+              <div class="gallery-item-description">
+                <p>Telur Asin Brebes varian Panggang</p>
+              </div>
+              <div class="gallery-button">
+                    <button>Beli sekarang >>></button>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://asset.kompas.com/crops/CbjYT0qzYWESwXmewHzcDOzRfvo=/0x0:1000x667/750x500/data/photo/2020/07/11/5f09b96dcf448.jpg" alt="Image 2">
+              <div class="gallery-item-description">
+                <p>Telur Asin Brebes varian Rebus</p>
+              </div>
+              <div class="gallery-button">
+                <button>Beli sekarang >>></button>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="https://images.tokopedia.net/img/cache/700/VqbcmM/2023/1/16/de5046f7-7a33-49ca-a597-1a7fda8b3a83.jpg" alt="Image 3">
+              <div class="gallery-item-description">
+                <p>Telur Asin Brebes varian Pindang</p>
+              </div>
+              <div class="gallery-button">
+                <button>Beli sekarang >>></button>
+              </div>
+            </div>
+          </div>
+    </div>
+
+   <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-content">
+            <p>&copy; 2023 Telur Asin Brebes. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
